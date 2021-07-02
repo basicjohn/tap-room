@@ -1,0 +1,260 @@
+{
+  "yearRound": [
+    {
+      "name": "IRA",
+      "pricePerUnit": 5,
+      "UnitsPerKeg": 124,
+      "NumberOfKegs": 3,
+      "CostPerKeg": 248,
+      "abv": 6.5,
+      "ibu": 65,
+      "Description": "Our India Red Ale uses plenty of Northwest-grown, Brewer’s Gold and Simcoe hops. With a solid foundation of Pilsner and crystal malts and our inimitable house yeast, these ingredients intertwine in delicious complexity and a shining ruby hue."
+    },
+    {
+      "name": "",
+      "pricePerUnit": 5,
+      "UnitsPerKeg": 124,
+      "NumberOfKegs": 3,
+      "CostPerKeg": 248,
+      "abv": 5.5,
+      "ibu": 55,
+      "Description": ""
+    },
+    {
+      "name": "",
+      "pricePerUnit": 5,
+      "UnitsPerKeg": 124,
+      "NumberOfKegs": 3,
+      "CostPerKeg": 248,
+      "abv": 5.5,
+      "ibu": 55,
+      "Description": ""
+    },
+    {
+      "name": "",
+      "pricePerUnit": 5,
+      "UnitsPerKeg": 124,
+      "NumberOfKegs": 3,
+      "CostPerKeg": 248,
+      "abv": 5.5,
+      "ibu": 55,
+      "Description": ""
+    },
+    {
+      "name": "",
+      "pricePerUnit": 5,
+      "UnitsPerKeg": 124,
+      "NumberOfKegs": 3,
+      "CostPerKeg": 248,
+      "abv": 5.5,
+      "ibu": 55,
+      "Description": ""
+    }
+  ],
+  "seasonal": [
+    {
+      "name": "Burnside Skatepark IPA",
+      "pricePerUnit": 5,
+      "UnitsPerKeg": 124,
+      "NumberOfKegs": 3,
+      "CostPerKeg": 248,
+      "abv": 6.8,
+      "ibu": 55,
+      "Description": "Shorter days and colder temperatures mean it’s time to dust off the sweaters and cozy up with a stout. Brewed in collaboration with Ranger Chocolate Co., this beer goes down smooth with notes of dark rye bread, baking chocolate, molasses, and dark fruit, leading to a dry finish."
+    },
+    {
+      "name": "",
+      "pricePerUnit": 5,
+      "UnitsPerKeg": 124,
+      "NumberOfKegs": 3,
+      "CostPerKeg": 248,
+      "abv": 5.5,
+      "ibu": 55,
+      "Description": ""
+    },
+    {
+      "name": "",
+      "pricePerUnit": 5,
+      "UnitsPerKeg": 124,
+      "NumberOfKegs": 3,
+      "CostPerKeg": 248,
+      "abv": 5.5,
+      "ibu": 55,
+      "Description": ""
+    },
+    {
+      "name": "",
+      "pricePerUnit": 5,
+      "UnitsPerKeg": 124,
+      "NumberOfKegs": 3,
+      "CostPerKeg": 248,
+      "abv": 5.5,
+      "ibu": 55,
+      "Description": ""
+    },
+    {
+      "name": "",
+      "pricePerUnit": 5,
+      "UnitsPerKeg": 124,
+      "NumberOfKegs": 3,
+      "CostPerKeg": 248,
+      "abv": 5.5,
+      "ibu": 55,
+      "Description": ""
+    },
+    {
+      "name": "",
+      "pricePerUnit": 5,
+      "UnitsPerKeg": 124,
+      "NumberOfKegs": 3,
+      "CostPerKeg": 248,
+      "abv": 5.5,
+      "ibu": 55,
+      "Description": ""
+    },
+    {
+      "name": "",
+      "pricePerUnit": 5,
+      "UnitsPerKeg": 124,
+      "NumberOfKegs": 3,
+      "CostPerKeg": 248,
+      "abv": 5.5,
+      "ibu": 55,
+      "Description": ""
+    },
+    {
+      "name": "",
+      "pricePerUnit": 5,
+      "UnitsPerKeg": 124,
+      "NumberOfKegs": 3,
+      "CostPerKeg": 248,
+      "abv": 5.5,
+      "ibu": 55,
+      "Description": ""
+    },
+    {
+      "name": "",
+      "pricePerUnit": 5,
+      "UnitsPerKeg": 124,
+      "NumberOfKegs": 3,
+      "CostPerKeg": 248,
+      "abv": 5.5,
+      "ibu": 55,
+      "Description": ""
+    }
+  ],
+  "smallBatch": [
+    {
+      "name": "",
+      "pricePerUnit": 5,
+      "UnitsPerKeg": 124,
+      "NumberOfKegs": 3,
+      "CostPerKeg": 248,
+      "abv": 5.5,
+      "ibu": 55,
+      "Description": ""
+    },
+    {
+      "name": "",
+      "pricePerUnit": 5,
+      "UnitsPerKeg": 124,
+      "NumberOfKegs": 3,
+      "CostPerKeg": 248,
+      "abv": 5.5,
+      "ibu": 55,
+      "Description": ""
+    },
+    {
+      "name": "",
+      "pricePerUnit": 5,
+      "UnitsPerKeg": 124,
+      "NumberOfKegs": 3,
+      "CostPerKeg": 248,
+      "abv": 5.5,
+      "ibu": 55,
+      "Description": ""
+    },
+    {
+      "name": "",
+      "pricePerUnit": 5,
+      "UnitsPerKeg": 124,
+      "NumberOfKegs": 3,
+      "CostPerKeg": 248,
+      "abv": 5.5,
+      "ibu": 55,
+      "Description": ""
+    },
+    {
+      "name": "",
+      "pricePerUnit": 5,
+      "UnitsPerKeg": 124,
+      "NumberOfKegs": 3,
+      "CostPerKeg": 248,
+      "abv": 5.5,
+      "ibu": 55,
+      "Description": ""
+    }
+  ],
+  "reserve": [
+    {
+      "name": "",
+      "pricePerUnit": 5,
+      "UnitsPerKeg": 124,
+      "NumberOfKegs": 3,
+      "CostPerKeg": 248,
+      "abv": 5.5,
+      "ibu": 55,
+      "Description": ""
+    },
+    {
+      "name": "",
+      "pricePerUnit": 5,
+      "UnitsPerKeg": 124,
+      "NumberOfKegs": 3,
+      "CostPerKeg": 248,
+      "abv": 5.5,
+      "ibu": 55,
+      "Description": ""
+    },
+    {
+      "name": "",
+      "pricePerUnit": 5,
+      "UnitsPerKeg": 124,
+      "NumberOfKegs": 3,
+      "CostPerKeg": 248,
+      "abv": 5.5,
+      "ibu": 55,
+      "Description": ""
+    },
+    {
+      "name": "",
+      "pricePerUnit": 5,
+      "UnitsPerKeg": 124,
+      "NumberOfKegs": 3,
+      "CostPerKeg": 248,
+      "abv": 5.5,
+      "ibu": 55,
+      "Description": ""
+    },
+    {
+      "name": "",
+      "pricePerUnit": 5,
+      "UnitsPerKeg": 124,
+      "NumberOfKegs": 3,
+      "CostPerKeg": 248,
+      "abv": 5.5,
+      "ibu": 55,
+      "Description": ""
+    },
+    {
+      "name": "",
+      "pricePerUnit": 5,
+      "UnitsPerKeg": 124,
+      "NumberOfKegs": 3,
+      "CostPerKeg": 248,
+      "abv": 5.5,
+      "ibu": 55,
+      "Description": ""
+    }
+  ]
+}
