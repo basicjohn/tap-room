@@ -39,7 +39,7 @@ Start the server
 ```
 ## Diagram
 
-![React Project Diagram](https://via.placeholder.com/468x300?text=App+Screenshot+Here)
+![React Project Diagram](diagram.png)
 
   
 ## Authors
