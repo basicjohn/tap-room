@@ -12,11 +12,17 @@ class App extends Component {
   render() {
     let currentlyVisibleState = null;
 
-    if (this.state.currentPage === 'keg') {
-      currentlyVisibleState = <Keg />
-    } else if (this.state.currentPage === 'allKegs') {
-      currentlyVisibleState = <AllKegs />
-    }  else if (this.state.currentPage === 'admin') {
+    if (this.state.currentPage === 'beer') {
+      currentlyVisibleState = <Beer />
+    } else if (this.state.currentPage === 'yearRound') {
+      currentlyVisibleState = <YearRound />
+    } else if (this.state.currentPage === 'seasonal') {
+      currentlyVisibleState = <Seasonal />
+    } else if (this.state.currentPage === 'smallBatch') {
+      currentlyVisibleState = <SmallBatch />
+    } else if (this.state.currentPage === 'reserve') {
+      currentlyVisibleState = <Reserve />
+    } else if (this.state.currentPage === 'admin') {
       // normally check for admin privileges
       currentlyVisibleState = <Admin createKeg={this.createKeg} />
     } else {
