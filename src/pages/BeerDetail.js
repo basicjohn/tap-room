@@ -1,5 +1,5 @@
 import React from 'react';
-import BeerList from './../components/beer';
+import BeerList from './../components/Beer';
 import kegs from '../kegs.json';
 
 function BeerDetail() {

@@ -10,11 +10,39 @@ import Seasonal from './pages/Seasonal';
 import SmallBatch from './pages/SmallBatch';
 import Reserve from './pages/Reserve';
 import BeerDetail from './pages/BeerDetail';
+// Helpers/data
+import kegsJson from './kegs.json';
 // import logo from './logo.svg';
 import './App.css';
 
 class App extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      currentPage: this.getCurrentLocation(),
+      beers: kegsJson
+    }
+  }
 
+  getCurrentLocation = () => {
+    return window.location.pathname.slice(1)
+  }
+
+  navigateTo = (event, location) => {
+    event.preventDefault();
+    this.setState({ currentPage: location });
+    window.history.replaceState({}, 'Double Fountain Brewery', location);
+  }
+
+
+  createBeer = async (name, pricePerUnit, unitsPerKeg, numberOfKegs, abv, ibu, description, department) => {
+    console.log('Making new keg:', name, pricePerUnit, unitsPerKeg, numberOfKegs, abv, ibu, description);
+    const newBeer = {
+      name, pricePerUnit: Number(pricePerUnit), unitsPerKeg: Number(unitsPerKeg), numberOfKegs: Number(numberOfKegs), abv: Number(abv), ibu: Number(ibu), description
+    }
+    const newBeersState = this.state.kegs[department].concat(newBeer);
+    await this.setState(prevState => { prevState.kegs[department] = newBeersState })
+  }
 
   render() {
     let currentlyVisibleState = null;
