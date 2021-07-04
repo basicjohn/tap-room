@@ -18,8 +18,8 @@ class App extends Component {
   render() {
     let currentlyVisibleState = null;
 
-    if (this.state.currentPage === 'beer') {
-      currentlyVisibleState = <Beer />
+    if (this.state.currentPage === 'beerDetail') {
+      currentlyVisibleState = <BeerDetail />
     } else if (this.state.currentPage === 'yearRound') {
       currentlyVisibleState = <YearRound />
     } else if (this.state.currentPage === 'seasonal') {

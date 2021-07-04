@@ -5,7 +5,7 @@ import { yearRound } from '../kegs.json';
 function YearRound() {
   return (
     <div className='container'>
-      <BeerList shoes={yearRound} />
+      <BeerList beers={yearRound} />
     </div>
   );
 }
