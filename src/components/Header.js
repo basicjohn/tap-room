@@ -6,8 +6,35 @@ function Header(props) {
 
   }
   return (
-    <header style={headerStyles}>
-      <h1>{props.title}</h1>
+    <header style={navbarStyles}>
+      <ul>
+        <li>
+          <a type="submit"
+            onClick={event => props.navigateTo(event, "home")}
+            style={linkStyles} href='/home'></a>
+        </li>
+        <li>
+          <a type="submit"
+            onClick={event => props.navigateTo(event, "yearRound")}
+            style={linkStyles} href='/yearRound'></a>
+        </li>
+        <li>
+          <a type="submit"
+            onClick={event => props.navigateTo(event, "seasonal")}
+            style={linkStyles} href='/seasonal'></a>
+        </li>
+        <li>
+          <a type="submit"
+            onClick={event => props.navigateTo(event, "smallBatch")}
+            style={linkStyles} href='/smallBatch'></a>
+        </li>
+        <li>
+          <a type="submit"
+            onClick={event => props.navigateTo(event, "reserve")}
+            style={linkStyles} href='/reserve'></a>
+        </li>
+
+      </ul>
     </header>
   )
 }
