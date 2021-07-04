@@ -2,8 +2,14 @@ import React, { Component } from 'react';
 // Components
 import Header from './components/Header'
 import Footer from './components/Footer'
-
-import logo from './logo.svg';
+// Pages
+import Admin from './pages/Admin';
+import Home from './pages/Home';
+import YearRound from './pages/YearRound';
+import Seasonal from './pages/Seasonal';
+import SmallBatch from './pages/SmallBatch';
+import Reserve from './pages/Reserve';
+// import logo from './logo.svg';
 import './App.css';
 
 class App extends Component {

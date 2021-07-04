@@ -2,38 +2,30 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 function Header(props) {
-  const footerStyles = {
 
-  }
   return (
-    <header style={navbarStyles}>
+    <header>
       <ul>
         <li>
           <a type="submit"
-            onClick={event => props.navigateTo(event, "home")}
-            style={linkStyles} href='/home'></a>
+            onClick={event => props.navigateTo(event, "home")} href='/home'></a>
         </li>
         <li>
           <a type="submit"
-            onClick={event => props.navigateTo(event, "yearRound")}
-            style={linkStyles} href='/yearRound'></a>
+            onClick={event => props.navigateTo(event, "yearRound")} href='/yearRound'></a>
         </li>
         <li>
           <a type="submit"
-            onClick={event => props.navigateTo(event, "seasonal")}
-            style={linkStyles} href='/seasonal'></a>
+            onClick={event => props.navigateTo(event, "seasonal")} href='/seasonal'></a>
         </li>
         <li>
           <a type="submit"
-            onClick={event => props.navigateTo(event, "smallBatch")}
-            style={linkStyles} href='/smallBatch'></a>
+            onClick={event => props.navigateTo(event, "smallBatch")} href='/smallBatch'></a>
         </li>
         <li>
           <a type="submit"
-            onClick={event => props.navigateTo(event, "reserve")}
-            style={linkStyles} href='/reserve'></a>
+            onClick={event => props.navigateTo(event, "reserve")} href='/reserve'></a>
         </li>
-
       </ul>
     </header>
   )
