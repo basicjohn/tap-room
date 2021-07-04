@@ -9,6 +9,7 @@ import YearRound from './pages/YearRound';
 import Seasonal from './pages/Seasonal';
 import SmallBatch from './pages/SmallBatch';
 import Reserve from './pages/Reserve';
+import BeerDetail from './pages/BeerDetail';
 // import logo from './logo.svg';
 import './App.css';
 
