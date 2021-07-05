@@ -8,6 +8,33 @@ body {
 }
 
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+  Font-Family: 'Cabin', Sans-Serif;
+}
+
+
+
+
+/* Global Styles */
+
+h1, h2, h3, h4, h5, h6 {
+  text-transform: uppercase;
+  Font-Family: 'Roboto Condensed', Sans-Serif;
+  Font-Size: 35px;
+}
+
+p, ul, li, span, textarea, input {
+  Font-Family: 'Cabin', Sans-Serif;
+  Font-Size: 16px;
+}
+
+
+.container {
+  grid-template-rows:  33% 33%;
+  display: grid;
+
+}
+
+
+.BeerDetail {
+  text-align: left;
 }

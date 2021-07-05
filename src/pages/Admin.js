@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import Header from './../components/Header';
 
 function Admin(props) {
-  const [type, setType] = useState("seasonal")
+  const [department, setDepartment] = useState("seasonal")
   const [name, setName] = useState("")
   const [pricePerUnit, setPricePerUnit] = useState("")
   const [unitsPerKeg, setUnitsPerKeg] = useState("")
@@ -13,7 +13,7 @@ function Admin(props) {
 
   const handleSubmit = event => {
     event.preventDefault();
-    props.createShoe(type, name, pricePerUnit, unitsPerKeg, numberOfKegs, abv, ibu, description)
+    props.createBeer(name, pricePerUnit, unitsPerKeg, numberOfKegs, abv, ibu, description, department)
   }
 
   return (
@@ -24,7 +24,7 @@ function Admin(props) {
       <div>
         <form onSubmit={event => handleSubmit(event)}>
           Create
-          <select onChange={event => setType(event.target.value)} placeholder="Department" required>
+          <select onChange={event => setDepartment(event.target.value)} placeholder="Department" required>
             <option value='yearRound' >Year Round</option>
             <option value='seasonal' selected>Seasonal</option>
             <option value='smallBatch'>Small Batch</option>
@@ -33,7 +33,7 @@ function Admin(props) {
           <input onChange={event => setName(event.target.value)} placeholder="Name" required></input>
           <input onChange={event => setPricePerUnit(event.target.value)} placeholder="Price Per Pint" type='number' min='0' required></input>
           <input onChange={event => setUnitsPerKeg(event.target.value)} placeholder="Pints Per Keg" required></input>
-          <input onChange={event => setNumberOfKegs(event.target.value)} placeholder="Pints Per Keg" required></input>
+          <input onChange={event => setNumberOfKegs(event.target.value)} placeholder="Number of Kegs" required></input>
           <input onChange={event => setAbv(event.target.value)} placeholder="Alcohol By Volume (ABV)" required></input>
           <input onChange={event => setIbu(event.target.value)} placeholder="Bittness Units (IBU)" required></input>
           <textarea onChange={event => setDescription(event.target.value)} placeholder="Describe the beer" required></textarea>
@@ -46,7 +46,7 @@ function Admin(props) {
         Delete
         Update
         {JSON.stringify(props.shoes)}
-        // add delete button
+        {/* add delete button */}
       </div>
     </>
   )

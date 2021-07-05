@@ -2,12 +2,10 @@ import Beer from './Beer';
 import { v4 as uuid } from 'uuid';
 
 function BeerList(props) {
-  const beersContainer = {
 
-  }
 
   return (
-    <div style={beersContainer}>
+    <div className="beersContainer">
       {props.beers.map((beer, index) => <Beer beer={beer} id={index} key={uuid()} />)}
     </div>
   )

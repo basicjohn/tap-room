@@ -35,13 +35,13 @@ class App extends Component {
   }
 
 
-  createBeer = async (name, pricePerUnit, unitsPerKeg, numberOfKegs, abv, ibu, description, department) => {
+  createBeer = (name, pricePerUnit, unitsPerKeg, numberOfKegs, abv, ibu, description, department) => {
     console.log('Making new keg:', name, pricePerUnit, unitsPerKeg, numberOfKegs, abv, ibu, description);
     const newBeer = {
       name, pricePerUnit: Number(pricePerUnit), unitsPerKeg: Number(unitsPerKeg), numberOfKegs: Number(numberOfKegs), abv: Number(abv), ibu: Number(ibu), description
     }
-    const newBeersState = this.state.kegs[department].concat(newBeer);
-    await this.setState(prevState => { prevState.kegs[department] = newBeersState })
+    const newBeersState = this.state.beers[department].concat(newBeer);
+    this.setState(prevState => { prevState.beers[department] = newBeersState })
   }
 
   render() {
@@ -59,7 +59,7 @@ class App extends Component {
       currentlyVisibleState = <Reserve />
     } else if (this.state.currentPage === 'admin') {
       // normally check for admin privileges
-      currentlyVisibleState = <Admin createKeg={this.createKeg} />
+      currentlyVisibleState = <Admin createBeer={this.createBeer} />
     } else {
       currentlyVisibleState = <Home navigateTo={this.navigateTo} />
     }
