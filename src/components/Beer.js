@@ -9,15 +9,15 @@ function Beer(props) {
 
 
   return (
-    <div>
-      <div className="BeerDetail" style={{ padding: '10px' }}>
-        <h2>{name}</h2>
-        <p>{description}</p>
-        <h4>${pricePerUnit}.00 per pint | ABV: {abv} | BU: {ibu}</h4>
+    <div className="beerUnit">
+      <div className="beerDetail" style={{ padding: '10px' }}>
+        <div><h2>{name}</h2></div>
+        <div><p>{description}</p></div>
+        <div><h4>${pricePerUnit}.00 per pint | ABV: {abv} | BU: {ibu}</h4></div>
       </div>
       <div className="beerStock" >
-        <a href="" type="submit">-1 Pint</a>
-        {/* <p>{pintsLeft}</p> */}
+        <a href="" type="submit" value="-1">-1 Pint</a>
+        <p>{unitsPerKeg}</p>
       </div>
     </div>
   )
