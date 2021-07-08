@@ -18,9 +18,6 @@ function Admin(props) {
 
   return (
     <>
-      <Header
-        title='Admin'
-      />
       <div>
         <form onSubmit={event => handleSubmit(event)}>
           Create
@@ -45,7 +42,7 @@ function Admin(props) {
         Read
         Delete
         Update
-        {JSON.stringify(props.shoes)}
+        {JSON.stringify(props.beers)}
         {/* add delete button */}
       </div>
     </>

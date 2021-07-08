@@ -10,16 +10,16 @@ function Beer(props) {
 
   return (
     <div className="beerUnit">
+      <div><h2>{name}</h2></div>
       <div className="beerDetail" style={{ padding: '10px' }}>
-        <div><h2>{name}</h2></div>
         <div><p>{description}</p></div>
         <div><h4>${pricePerUnit}.00 per pint | ABV: {abv} | BU: {ibu}</h4></div>
       </div>
       <div className="beerStock" >
-        <a href="" type="submit" value="-1">-1 Pint</a>
-        <p>{unitsPerKeg}</p>
+        <a type="button" onClick={() => props.sellPint(props.name)}>-1 Pint</a>
+        <p>Available<br />{unitsPerKeg}</p>
       </div>
-    </div>
+    </div >
   )
 }
 
