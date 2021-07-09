@@ -34,7 +34,6 @@ class App extends Component {
     window.history.replaceState({}, 'Double Fountain Brewery', location);
   }
 
-
   createBeer = (name, pricePerUnit, unitsPerKeg, numberOfKegs, abv, ibu, description, department) => {
     console.log('Making new keg:', name, pricePerUnit, unitsPerKeg, numberOfKegs, abv, ibu, description);
     const newBeer = {
@@ -42,6 +41,16 @@ class App extends Component {
     }
     const newBeersState = this.state.beers[department].concat(newBeer);
     this.setState(prevState => { prevState.beers[department] = newBeersState })
+  }
+
+
+  handleSellingBeer (id) => {
+    const soldBeer = this.state.beers.filter(beer => beer.id === id)[0]
+    soldBeer.UnitsLeftInKeg -= 1
+    const beerListCopy = this.state.beers.filter(beer => beer.id !== id)
+    beersListCopy.push(kegCopy)
+    await this.setState({ beers: beersListCopy })
+    this.setBeersToStorage()
   }
 
   render() {

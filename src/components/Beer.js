@@ -16,7 +16,7 @@ function Beer(props) {
         <div><h4>${pricePerUnit}.00 per pint | ABV: {abv} | BU: {ibu}</h4></div>
       </div>
       <div className="beerStock" >
-        <a type="button" onClick={() => props.sellPint(props.name)}>-1 Pint</a>
+        <a type="button" onClick={() => props.sellBeer(props.id)}>-1 Pint</a>
         <p>Available<br />{unitsPerKeg}</p>
       </div>
     </div >
@@ -24,3 +24,8 @@ function Beer(props) {
 }
 
 export default Beer;
+
+
+
+
+
