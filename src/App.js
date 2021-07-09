@@ -44,14 +44,22 @@ class App extends Component {
   }
 
 
-  handleSellingBeer (id) => {
-    const soldBeer = this.state.beers.filter(beer => beer.id === id)[0]
-    soldBeer.UnitsLeftInKeg -= 1
-    const beerListCopy = this.state.beers.filter(beer => beer.id !== id)
-    beersListCopy.push(kegCopy)
-    await this.setState({ beers: beersListCopy })
-    this.setBeersToStorage()
-  }
+ handleSellingBeer = (id, department) => {
+    const soldBeer = this.state.beers[department].filter(beer => beer.id === id)[0]
+    if (soldBeer.UnitsLeftInKeg > 0) {
+      soldBeer.UnitsLeftInKeg -= 1
+    } else if ( soldBeer.UnitsLeftInKeg === 0 ) {
+        if (numberOfKegs > 0) {
+          soldBeer.numberOfKegs -= 1
+          soldBeer.UnitsLeftInKeg = soldBeer.unitsPerKeg
+        }
+      }
+      const beerListCopy = this.state.beers[department].filter(beer => beer.id !== id)
+      beerListCopy.push(soldBeer)
+      this.setState({ beers: beerListCopy })  
+    }
+  };
+
 
   render() {
     let currentlyVisibleState = null;
