@@ -49,15 +49,15 @@ class App extends Component {
     if (soldBeer.UnitsLeftInKeg > 0) {
       soldBeer.UnitsLeftInKeg -= 1
     } else if ( soldBeer.UnitsLeftInKeg === 0 ) {
-        if (numberOfKegs > 0) {
+        if (soldBeer.numberOfKegs > 0) {
           soldBeer.numberOfKegs -= 1
           soldBeer.UnitsLeftInKeg = soldBeer.unitsPerKeg
         }
       }
       const beerListCopy = this.state.beers[department].filter(beer => beer.id !== id)
       beerListCopy.push(soldBeer)
-      this.setState({ beers: beerListCopy })  
-    }
+      this.setState({ beers: beerListCopy })
+    
   };
 
 
