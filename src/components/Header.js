@@ -5,6 +5,7 @@ function Header(props) {
 
   return (
     <header>
+      {/* <h1>{props.title}</h1> */}
       <ul>
         <li>
           <a type="submit"
@@ -39,8 +40,8 @@ function Header(props) {
   )
 }
 
-Header.propTypes = {
-  title: PropTypes.string.isRequired
-}
+// Header.propTypes = {
+//   title: PropTypes.string.isRequired
+// }
 
 export default Header;

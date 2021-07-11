@@ -1,7 +1,7 @@
 // import './Beer.css';
 
 function Beer(props) {
-  const { id, name, unitsLeftInKeg, pricePerUnit, unitsPerKeg, numberOfKegs, abv, ibu, description } = props.beer;
+  const { id, name, unitsLeftInKeg, pricePerUnit, abv, ibu, description } = props.beer;
 
   // const getPintsLeft = () => {
 
@@ -16,7 +16,8 @@ function Beer(props) {
         <div><h4>${pricePerUnit}.00 per pint | ABV: {abv} | BU: {ibu}</h4></div>
       </div>
       <div className="beerStock" >
-        <button type="button" onClick={() => props.soldBeer(id, props.beers)}>-1 Pint</button>
+        {console.log(id, props.department)}
+        <button type="submit" onClick={() => props.sellBeer(id, props.department)}>-1 Pint</button>
         <p>Available<br />{unitsLeftInKeg}</p>
       </div>
     </div >

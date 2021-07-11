@@ -5,7 +5,7 @@ import { smallBatch } from '../kegs.json';
 function SmallBatch(props) {
   return (
     <div className='container'>
-      <BeerList beers={smallBatch} soldBeer={props.soldBeer} />
+      <BeerList beers={smallBatch} department={'smallBatch'} sellBeer={props.sellBeer} />
     </div>
   );
 }

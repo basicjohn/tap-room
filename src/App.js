@@ -55,7 +55,8 @@ class App extends Component {
         soldBeer.UnitsLeftInKeg = soldBeer.unitsPerKeg
       }
     }
-    const beerListCopy = this.state.beers[department].filter(beer => beer.id !== id)
+    const beerListCopy = this.state.beers[department]
+    .filter((beer) => beer.id !== id)
     beerListCopy.push(soldBeer)
     this.setState({ beers: beerListCopy })
   };
@@ -71,7 +72,7 @@ class App extends Component {
     } else if (this.state.currentPage === 'seasonal') {
       currentlyVisibleState = <Seasonal soldBeer={this.handleSellingBeer()}/>
     } else if (this.state.currentPage === 'smallBatch') {
-      currentlyVisibleState = <SmallBatch department={this.state.currentPage} soldBeer={this.handleSellingBeer()}/>
+      currentlyVisibleState = <SmallBatch sellBeer={(id,department) => this.handleSellingBeer(id, department)}/>
     } else if (this.state.currentPage === 'reserve') {
       currentlyVisibleState = <Reserve soldBeer={this.handleSellingBeer()}/>
     } else if (this.state.currentPage === 'admin') {
