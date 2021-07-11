@@ -5,7 +5,7 @@ import { reserve } from '../kegs.json';
 function Reserve(props) {
   return (
     <div className='container'>
-      <BeerList beers={reserve} soldBeer={this.handleSellingBeer}/>
+      <BeerList beers={reserve} department={props.department} sellBeer={props.sellBeer} />
     </div>
   );
 }

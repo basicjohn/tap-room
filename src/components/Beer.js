@@ -17,7 +17,7 @@ function Beer(props) {
       </div>
       <div className="beerStock" >
         {console.log(id, props.department)}
-        <button type="submit" onClick={() => props.sellBeer(id, props.department)}>-1 Pint</button>
+        <button onClick={() => props.sellBeer(id, props.department)}>-1 Pint</button>
         <p>Available<br />{unitsLeftInKeg}</p>
       </div>
     </div >

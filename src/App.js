@@ -12,7 +12,7 @@ import Reserve from './pages/Reserve';
 import BeerDetail from './pages/BeerDetail';
 // Helpers/data
 import kegsJson from './kegs.json';
-// import logo from './logo.svg';
+
 import './App.css';
 
 class App extends Component {
@@ -45,6 +45,8 @@ class App extends Component {
 
 
  handleSellingBeer = (id, department) => {
+   
+    console.log(id, department)
     const soldBeer = this.state.beers[department].filter(beer => beer.id === id)[0]
     if (soldBeer.UnitsLeftInKeg > 0) {
       soldBeer.UnitsLeftInKeg -= 1
@@ -68,13 +70,13 @@ class App extends Component {
     if (this.state.currentPage === 'beerDetail') {
       currentlyVisibleState = <BeerDetail />
     } else if (this.state.currentPage === 'yearRound') {
-      currentlyVisibleState = <YearRound soldBeer={this.handleSellingBeer()}/>
+      currentlyVisibleState = <YearRound department='yearRound' sellBeer={(id,department) => this.handleSellingBeer(id, department)}/>
     } else if (this.state.currentPage === 'seasonal') {
-      currentlyVisibleState = <Seasonal soldBeer={this.handleSellingBeer()}/>
+      currentlyVisibleState = <Seasonal department='seasonal' sellBeer={(id,department) => this.handleSellingBeer(id, department)}/>
     } else if (this.state.currentPage === 'smallBatch') {
-      currentlyVisibleState = <SmallBatch sellBeer={(id,department) => this.handleSellingBeer(id, department)}/>
+      currentlyVisibleState = <SmallBatch department='smallBatch' sellBeer={(id,department) => this.handleSellingBeer(id, department)}/>
     } else if (this.state.currentPage === 'reserve') {
-      currentlyVisibleState = <Reserve soldBeer={this.handleSellingBeer()}/>
+      currentlyVisibleState = <Reserve department='reserve' sellBeer={(id,department) => this.handleSellingBeer(id, department)}/>
     } else if (this.state.currentPage === 'admin') {
       // normally check for admin privileges
       currentlyVisibleState = <Admin createBeer={this.createBeer} />
