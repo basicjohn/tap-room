@@ -4,15 +4,15 @@ body {
   width: 100%;
   padding: 0;
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
 code {
-  Font-Family: 'Cabin', Sans-Serif;
+  font-family: "Cabin", Sans-Serif;
 }
 
 #root {
@@ -22,18 +22,27 @@ code {
   margin-right: auto;
 }
 
-
 /* Global Styles */
 
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   text-transform: uppercase;
-  Font-Family: 'Roboto Condensed', Sans-Serif;
-  Font-Size: 35px;
+  font-family: "Roboto Condensed", Sans-Serif;
+  font-size: 35px;
 }
 
-p, ul, li, span, textarea, input {
-  Font-Family: 'Cabin', Sans-Serif;
-  Font-Size: 16px;
+p,
+ul,
+li,
+span,
+textarea,
+input {
+  font-family: "Cabin", Sans-Serif;
+  font-size: 16px;
 }
 
 /* Header Component Styles */
@@ -44,31 +53,29 @@ header {
   position: relative;
 }
 
-  header ul {
-    list-style-type: none;
-  }
+header ul {
+  list-style-type: none;
+}
 
-  header ul li {
-    float: left;
-    padding-left: 10px; 
-    padding-right: 10px; 
-  }
+header ul li {
+  float: left;
+  padding-left: 10px;
+  padding-right: 10px;
+}
 
-  header ul li a{
-    font-size: 16px;
-    color: #fff;
-    line-height: 80px;
-    text-decoration: none;
-    display: block;
-  }
+header ul li a {
+  font-size: 16px;
+  color: #fff;
+  line-height: 80px;
+  text-decoration: none;
+  display: block;
+}
 
-main { 
+main {
   min-height: 600px;
   padding: 15px;
   background-color: whitesmoke;
 }
-
-
 
 /* Beer.js component styles */
 .beersContainer {
@@ -83,7 +90,7 @@ main {
 
 .beerUnit {
   display: grid;
-  grid-template-columns:  5fr 2fr ;
+  grid-template-columns: 5fr 2fr;
   overflow: none;
 }
 
@@ -100,10 +107,9 @@ main {
 .beerDetail {
   height: 155px;
   display: grid;
-  grid-template-rows:  9fr 1fr;
+  grid-template-rows: 9fr 1fr;
   text-align: left;
 }
-
 
 .beerDetail p {
   font-size: 12px;
@@ -120,20 +126,19 @@ main {
   margin-bottom: auto;
 }
 
-.beerStock a {
+.beerStock button {
   padding: 15px 15px;
   background-color: #323232;
   color: #fff;
   border-radius: 19px;
   border-width: 1px;
-  box-sizing:border-box;
-  display:block
+  box-sizing: border-box;
+  display: block;
 }
 
 .beerStock p {
-  margin: 10px 0 0 0 ;
+  margin: 10px 0 0 0;
 }
-
 
 /* Footer Styles */
 

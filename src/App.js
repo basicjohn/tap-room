@@ -48,16 +48,16 @@ class App extends Component {
     const soldBeer = this.state.beers[department].filter(beer => beer.id === id)[0]
     if (soldBeer.UnitsLeftInKeg > 0) {
       soldBeer.UnitsLeftInKeg -= 1
-    } else if ( soldBeer.UnitsLeftInKeg === 0 ) {
-        if (soldBeer.numberOfKegs > 0) {
-          soldBeer.numberOfKegs -= 1
-          soldBeer.UnitsLeftInKeg = soldBeer.unitsPerKeg
-        }
+    }
+    else if ( soldBeer.UnitsLeftInKeg === 0 ) {
+      if (soldBeer.numberOfKegs > 0) {
+        soldBeer.numberOfKegs -= 1
+        soldBeer.UnitsLeftInKeg = soldBeer.unitsPerKeg
       }
-      const beerListCopy = this.state.beers[department].filter(beer => beer.id !== id)
-      beerListCopy.push(soldBeer)
-      this.setState({ beers: beerListCopy })
-    
+    }
+    const beerListCopy = this.state.beers[department].filter(beer => beer.id !== id)
+    beerListCopy.push(soldBeer)
+    this.setState({ beers: beerListCopy })
   };
 
 
@@ -67,13 +67,13 @@ class App extends Component {
     if (this.state.currentPage === 'beerDetail') {
       currentlyVisibleState = <BeerDetail />
     } else if (this.state.currentPage === 'yearRound') {
-      currentlyVisibleState = <YearRound />
+      currentlyVisibleState = <YearRound soldBeer={this.handleSellingBeer()}/>
     } else if (this.state.currentPage === 'seasonal') {
-      currentlyVisibleState = <Seasonal />
+      currentlyVisibleState = <Seasonal soldBeer={this.handleSellingBeer()}/>
     } else if (this.state.currentPage === 'smallBatch') {
-      currentlyVisibleState = <SmallBatch />
+      currentlyVisibleState = <SmallBatch department={this.state.currentPage} soldBeer={this.handleSellingBeer()}/>
     } else if (this.state.currentPage === 'reserve') {
-      currentlyVisibleState = <Reserve />
+      currentlyVisibleState = <Reserve soldBeer={this.handleSellingBeer()}/>
     } else if (this.state.currentPage === 'admin') {
       // normally check for admin privileges
       currentlyVisibleState = <Admin createBeer={this.createBeer} />
