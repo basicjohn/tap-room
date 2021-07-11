@@ -10,6 +10,8 @@ import Seasonal from './pages/Seasonal';
 import SmallBatch from './pages/SmallBatch';
 import Reserve from './pages/Reserve';
 import BeerDetail from './pages/BeerDetail';
+import { v4 } from 'uuid';
+
 // Helpers/data
 import kegsJson from './kegs.json';
 
@@ -37,7 +39,7 @@ class App extends Component {
   createBeer = (name, pricePerUnit, unitsPerKeg, numberOfKegs, abv, ibu, description, department) => {
     console.log('Making new keg:', name, pricePerUnit, unitsPerKeg, numberOfKegs, abv, ibu, description);
     const newBeer = {
-      name, pricePerUnit: Number(pricePerUnit), unitsPerKeg: Number(unitsPerKeg), numberOfKegs: Number(numberOfKegs), abv: Number(abv), ibu: Number(ibu), description
+     id: v4(), name, pricePerUnit: Number(pricePerUnit), UnitsLeftInKeg: Number(unitsPerKeg), unitsPerKeg: Number(unitsPerKeg), numberOfKegs: Number(numberOfKegs), abv: Number(abv), ibu: Number(ibu), description
     }
     const newBeersState = this.state.beers[department].concat(newBeer);
     this.setState(prevState => { prevState.beers[department] = newBeersState })
@@ -45,7 +47,6 @@ class App extends Component {
 
 
  handleSellingBeer = (id, department) => {
-   
     console.log(id, department)
     const soldBeer = this.state.beers[department].filter(beer => beer.id === id)[0]
     if (soldBeer.UnitsLeftInKeg > 0) {
